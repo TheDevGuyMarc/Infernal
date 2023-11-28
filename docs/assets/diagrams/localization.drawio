@@ -1,0 +1,43 @@
+<mxfile host="Electron" modified="2023-11-24T08:40:39.961Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="Pzzq8QXtrSMZRWOUXy4q" version="22.1.2" type="device">
+  <diagram name="Page-1" id="fc53PjWgiXOJ03WmeA5d">
+    <mxGraphModel dx="862" dy="1385" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-1" value="LocalizationManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="120" width="480" height="268" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-5" value="- static final instance: LocalizationManager" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="26" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-6" value="- final translations: Map&amp;lt;String, Map&amp;lt;String, String&amp;gt;&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="52" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-7" value="- defaultLanguage: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="78" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-8" value="- currentLanguage: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="104" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-2" value="- final gson: Gson" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="130" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="156" width="480" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-9" value="+ static getInstance(): LocalizationManager" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="164" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-4" value="+ addTranslation(String languageCode, Map&amp;lt;String, String&amp;gt; translation): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="190" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-11" value="+ load(String path, String languageCode): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="216" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="cGEMJaQvpZejHhC6IxKJ-10" value="+ translate(String key): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cGEMJaQvpZejHhC6IxKJ-1">
+          <mxGeometry y="242" width="480" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,185 @@
+- [ ] Setup
+- [ ] Infernal
+    - [ ] Core Layer
+        - [ ] Application Abstraction
+            - [ ] Application Config
+        - [ ] Window Abstraction (GLFW interface)
+            - [ ] Window Config
+        - [ ] Event System
+            - [ ] Event Abstraction
+                - [ ] Window Event Abstraction
+                - [ ] Application Event Abstraction
+                - [ ] Key Event Abstraction
+                - [ ] Mouse Event Abstraction
+            - [ ] Event Category Abstraction
+            - [ ] Event Dispatcher Abstraction
+            - [ ] Event Type Abstraction
+        - [ ] Input System
+            - [ ] Input Handler Abstraction
+            - [ ] Mouse Code Abstraction (GLFW)
+            - [ ] Key Code Abstraction (GLFW)
+        - [ ] Debug System
+            - [ ] Profiling
+                - [ ] Profiler Abstraction
+                - [ ] ProfileSession Abstraction
+            - [ ] Logging Interface (Tinylog Abstraction)
+                - [ ] Log To File
+                - [ ] LogFormat
+        - [ ] Serialization System
+            - [ ] Serializer
+            - [ ] Utils
+            - [ ] JsonSerializer
+            - [ ] CSVSerializer
+        - [ ] Localization System
+        - [ ] Math Engine
+            - [ ] Random Number Generation
+                - [ ] XOR-Shift
+                - [ ] Mersenne Twister
+        - [ ] Networking System
+            - [ ] Server
+                - [ ] Abstract Server
+                - [ ] Game Server
+                - [ ] Auth Server
+                - [ ] Player
+                - [ ] Realm
+                - [ ] Server Interface
+                - [ ] ServerType
+            - [ ] Client
+                - [ ] ClientHandler Interface
+                - [ ] GameClient
+                - [ ] GameClientHandler
+            - [ ] Handler
+                - [ ] AuthServerHandler
+                - [ ] GameServerHandler
+                - [ ] ServerHandler
+            - [ ] Channels
+                - [ ] AuthChannelInitializer
+                - [ ] GameChannelInitializer
+            - [ ] ShardingManager
+    - [ ] Asset System
+        - [ ] Asset Manager
+        - [ ] Asset Abstraction
+        - [ ] Asset Type Abstraction
+            - [ ] None
+            - [ ] Scene
+            - [ ] Prefab
+            - [ ] Mesh
+            - [ ] Material
+            - [ ] Texture
+            - [ ] Audio
+            - [ ] Font
+            - [ ] Script
+            - [ ] Animation
+        - [ ] Asset Extension Abstraction
+        - [ ] Asset Manager Abstraction
+        - [ ] Asset Meta Data Abstraction
+        - [ ] Asset Registry
+    - [ ] Platform Layer
+        - [ ] Platform Detection
+            - [ ] Platform Detection Abstraction
+            - [ ] Platform Abstraction
+        - [ ] Time System
+            - [ ] Timer Abstraction
+            - [ ] TimeStep Abstraction
+        - [ ] Primitives
+            - [ ] Custom Datatypes
+            - [ ] Layer Abstraction
+            - [ ] LayerStack Abstraction
+            - [ ] Buffer Abstraction
+            - [ ] ScopedBuffer Abstraction
+        - [ ] Box2D
+        - [ ] OpenGL
+        - [ ] OpenAL
+    - [ ] ImGUI Integration
+        - [ ] ImGui Abstraction
+        - [ ] ImGui Docking & Viewports
+        - [ ] ImGui Gizmos
+    - [ ] Rendering Engine
+        - [ ] Renderer
+            - [ ] Base
+                - [ ] Framebuffer
+                - [ ] Vertexbuffer
+                - [ ] Indexbuffer
+                - [ ] Font
+                - [ ] Texture
+                - [ ] Materials
+            - [ ] Shader
+            - [ ] Camera
+                - [ ] Editor Camera
+                - [ ] Orthographic Camera
+            - [ ] Render context
+            - [ ] Swapchain
+            - [ ] Pipelines
+            - [ ] Render Passes
+            - [ ] Renderer 2D
+            - [ ] 2D Renderer
+            - [ ] Render Command
+            - [ ] Sorting
+            - [ ] Culling
+            - [ ] LOD
+            - [ ] Animation
+            - [ ] VFX
+                - [ ] Animation
+                - [ ] Particle System
+            - [ ] PostFX
+            - [ ] Sprites
+            - [ ] Tiles
+    - [ ] Audio System
+        - [ ] Playback
+        - [ ] Effects
+            - [ ] Looping
+            - [ ] Panning
+            - [ ] Pitching
+            - [ ] Volume
+            - [ ] Relativity
+            - [ ] Position
+            - [ ] Velocity
+            - [ ] Chorus
+            - [ ] Reverb
+            - [ ] Filters
+            - [ ] Distortion
+            - [ ] Flanger
+            - [ ] Phaser
+            - [ ] Modulation
+            - [ ] Compression
+            - [ ] EQ
+            - [ ] Delay
+            - [ ] Vibrato
+            - [ ] Gate
+            - [ ] Tremolo
+            - [ ] Saturation
+    - [ ] Scene System
+        - [ ] Scene Graph
+    - [ ] ECS
+        - [ ] Entities
+        - [ ] Components
+        - [ ] ScriptableEntities
+    - [ ] Project System
+        - [ ] Loading Projects
+        - [ ] Saving Projects
+        - [ ] Exporting Projects
+    - [ ] Physics Engine
+    - [ ] Runtime
+    - [ ] Playing & Stopping Scenes
+    - [ ] Scripting (Lua) System
+    - [ ] Multiplayer System
+        - [ ] Chat
+        - [ ] Freundesliste
+        - [ ] Gruppe/Party
+        - [ ] Dungeons / Raids
+    - [ ] AI System
+        - [ ] AI Controller
+        - [ ] Pathfinding
+            - [ ] A Star
+        - [ ] Fleeing
+        - [ ] Following
+        - [ ] Patrolling
+        - [ ] Pursue
+        - [ ] Seeking
+        - [ ] Steering
+- [ ] Gehenna
+    - [ ] Console Panel
+    - [ ] Asset Manager Panel
+    - [ ] Scene Graph Panel
+    - [ ] Properties Panel
+    - [ ] Audio Panel

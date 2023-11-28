@@ -1,0 +1,67 @@
+- README.md
+- .gitignore
+- pom.xml
+- src / main / java / de
+    - traumastudios
+        - infernal/
+            - ai/
+            - assets/
+                - assettypes/
+            - audio/
+            - core/
+                - debug/
+                - event/
+                - input/
+                - localization/
+                - math/
+                - networking/
+                    - channels/
+                    - client/
+                    - handler/
+                    - server/
+                - serialization/
+                - window/
+                - Application.java
+                - ApplicationSpecification.java
+                - Base.java
+            - ecs/
+            - graphics/
+                - base/
+                - camera/
+                - shaders/
+                - vfx/
+            - physics/
+            - platform/
+                - openAL/
+                - openGL/
+                - box2D/
+                - platformdetection/
+                - primitives/
+                - timer/
+            - project/
+            - scripting/
+            - ui/
+        - resources
+## Dependencies
+
+- LWJGL
+    - Assimp
+    - Freetype
+    - GLFW
+    - NFD
+    - OpenAL
+    - OpenGL
+    - SPIR-V
+    - STB
+    - JOML
+    - Natives (Windows, Linux, Mac)
+- ImGui
+- Box2D
+- GSON
+- OpenCSV
+- Netty
+- Javazoom
+- Lombok
+- Tinylog
+- JUnit5
+- Mockito
