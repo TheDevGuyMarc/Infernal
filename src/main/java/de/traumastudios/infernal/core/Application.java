@@ -1,5 +1,7 @@
 package de.traumastudios.infernal.core;
 
+import de.traumastudios.infernal.core.window.Window;
+import de.traumastudios.infernal.core.window.WindowConfig;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,9 +22,9 @@ public class Application implements Base {
     private boolean isRunning;
     private boolean isMinimized;
     private ApplicationConfig appConfig;
-    /*private WindowConfig windowConfig;
+    private WindowConfig windowConfig;
     private Window window;
-    private Input inputHandler;
+    /*private Input inputHandler;
     private AssetManager assetManager;
     private LocalizationManager localizationManager;
     private Renderer renderer;
