@@ -11,10 +11,10 @@ import java.util.UUID;
 @Getter
 @Setter
 public class MouseScrolledEvent extends Event {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
 
-    public MouseScrolledEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, int x, int y) {
+    public MouseScrolledEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, double x, double y) {
         super(id, category, eventType, isHandled);
         this.x = x;
         this.y = y;

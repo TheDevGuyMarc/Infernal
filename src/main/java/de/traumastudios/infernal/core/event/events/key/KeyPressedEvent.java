@@ -10,7 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class KeyPressedEvent extends KeyEvent {
-    public KeyPressedEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, KeyCode keyCode) {
+    public KeyPressedEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, int keyCode) {
         super(id, category, eventType, isHandled, keyCode);
     }
 }
