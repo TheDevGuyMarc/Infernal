@@ -11,9 +11,9 @@ import java.util.UUID;
 @Getter
 @Setter
 public class MouseButtonEvent extends Event {
-    private MouseCode mouseCode;
+    private int mouseCode;
 
-    public MouseButtonEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, MouseCode mouseCode) {
+    public MouseButtonEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, int mouseCode) {
         super(id, category, eventType, isHandled);
         this.mouseCode = mouseCode;
     }
