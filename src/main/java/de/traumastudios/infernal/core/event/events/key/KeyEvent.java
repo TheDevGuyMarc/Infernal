@@ -11,8 +11,8 @@ import java.util.UUID;
 @Getter
 @Setter
 public class KeyEvent extends Event {
-    private KeyCode keyCode;
-    public KeyEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, KeyCode keyCode) {
+    private int keyCode;
+    public KeyEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, int keyCode) {
         super(id, category, eventType, isHandled);
         this.keyCode = keyCode;
     }

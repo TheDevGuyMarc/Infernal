@@ -10,7 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class MouseButtonReleasedEvent extends MouseButtonEvent {
-    public MouseButtonReleasedEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, MouseCode mouseCode) {
+    public MouseButtonReleasedEvent(UUID id, EventCategory category, EventType eventType, boolean isHandled, int mouseCode) {
         super(id, category, eventType, isHandled, mouseCode);
     }
 }
