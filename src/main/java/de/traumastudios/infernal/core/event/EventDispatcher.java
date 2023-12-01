@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.function.Consumer;
 
 public class EventDispatcher {
-    private Profiler profiler = new Profiler();
+    private final Profiler profiler = new Profiler();
     private final Map<EventType, Map<EventCategory, List<Consumer<Event>>>> listeners = new HashMap<>();
     private final Queue<Event> eventQueue = new LinkedList<>();
 
