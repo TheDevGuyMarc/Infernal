@@ -1,5 +1,7 @@
 package de.traumastudios.infernal.core.serialization;
 
+import de.traumastudios.infernal.core.debug.InfernalLogger;
+
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -9,6 +11,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class FileUtil {
+    private static final InfernalLogger logger = InfernalLogger.getInstance("file.log");
     private static final int DEFAULT_BUFFER_SIZE = 8192;
 
     /**
@@ -92,6 +95,7 @@ public class FileUtil {
 
             buffer.flip();
         } catch (IOException e) {
+            logger.error("Failed to read resource: " + resource + " - Exception: " + e);
             throw new IOException("Failed to read resource: " + resource, e);
         }
 
