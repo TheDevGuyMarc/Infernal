@@ -1,9 +1,12 @@
 package de.traumastudios.infernal.core.event;
 
+import de.traumastudios.infernal.core.debug.Profiler;
+
 import java.util.*;
 import java.util.function.Consumer;
 
 public class EventDispatcher {
+    private Profiler profiler = new Profiler();
     private final Map<EventType, Map<EventCategory, List<Consumer<Event>>>> listeners = new HashMap<>();
     private final Queue<Event> eventQueue = new LinkedList<>();
 
@@ -46,6 +49,8 @@ public class EventDispatcher {
         EventType eventType = event.getEventType();
         EventCategory eventCategory = event.getCategory();
 
+        this.profiler.start("EventDispatch");
+
         Map<EventCategory, List<Consumer<Event>>> categoryListeners = listeners.get(eventType);
         if (categoryListeners != null) {
             List<Consumer<Event>> listenersByCategory = categoryListeners.getOrDefault(eventCategory, new ArrayList<>());
@@ -56,5 +61,7 @@ public class EventDispatcher {
                 }
             });
         }
+
+        this.profiler.stop("EventDispatch");
     }
 }
