@@ -1,5 +1,7 @@
 package de.traumastudios.infernal.core;
 
+import de.traumastudios.infernal.core.debug.InfernalLogger;
+import de.traumastudios.infernal.core.input.Input;
 import de.traumastudios.infernal.core.window.Window;
 import de.traumastudios.infernal.core.window.WindowConfig;
 import lombok.Getter;
@@ -24,8 +26,9 @@ public class Application implements Base {
     private ApplicationConfig appConfig;
     private WindowConfig windowConfig;
     private Window window;
-    /*private Input inputHandler;
-    private AssetManager assetManager;
+    private InfernalLogger logger = InfernalLogger.getInstance("application.log");
+    private Input inputHandler;
+    /*private AssetManager assetManager;
     private LocalizationManager localizationManager;
     private Renderer renderer;
     private AudioEngine audioManager;
@@ -40,7 +43,7 @@ public class Application implements Base {
         this.windowConfig = windowConfig;
 
         // Initialize application window
-        this.window = new Window(this.windowConfig);
+        this.window = new Window(this.windowConfig, logger);
         this.window.init();
 
         // Initialize input
@@ -96,15 +99,15 @@ public class Application implements Base {
 
     @Override
     public void run() {
-        System.out.println("LWJGL version: " + Version.getVersion() + "!");
+        this.logger.info("LWJGL version: " + Version.getVersion() + "!");
 
         init(this.appConfig, this.windowConfig);
 
-        System.out.println("Initialized GLFW: " + glfwGetVersionString().toLowerCase());
+        this.logger.info("Initialized GLFW: " + glfwGetVersionString().toLowerCase());
 
         loop();
 
-        System.out.println("Stopping the engine");
+        this.logger.info("Stopping infernal");
 
         stop();
     }

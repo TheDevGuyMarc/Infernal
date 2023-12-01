@@ -1,5 +1,6 @@
 package de.traumastudios.infernal.core.input;
 
+import de.traumastudios.infernal.core.debug.InfernalLogger;
 import de.traumastudios.infernal.core.event.Event;
 import de.traumastudios.infernal.core.event.EventCategory;
 import de.traumastudios.infernal.core.event.EventType;
@@ -20,6 +21,7 @@ import java.util.function.Consumer;
 @Getter
 @Setter
 public class Input implements IInput {
+    private InfernalLogger logger = InfernalLogger.getInstance("input.log");
     private final int KEY_COUNT = 350; // Maximum GLFW key codes
     private final int MOUSE_BUTTON_COUNT = 8; // Maximum GLFW mouse button codes
 
@@ -76,36 +78,43 @@ public class Input implements IInput {
 
     @Override
     public boolean isKeyDown(int key) {
+        this.logger.debug("Key: " + key + "Pressed: " + this.keys[key]);
         return this.keys[key];
     }
 
     @Override
     public boolean isKeyReleased(int key) {
+        this.logger.debug("Key: " + key + "Released: " + this.keys[key]);
         return isKeyDown(key) && !keysProcessed[key];
     }
 
     @Override
     public boolean isKeyHeld(int key) {
+        this.logger.debug("Key: " + key + "Held: " + this.keys[key]);
         return false;
     }
 
     @Override
     public boolean isMouseButtonDown(int button) {
+        this.logger.debug("Button: " + button + "Pressed: " + this.mouseButtons[button]);
         return mouseButtons[button];
     }
 
     @Override
     public boolean isMouseButtonReleased(int button) {
+        this.logger.debug("Button: " + button + "Released: " + this.mouseButtons[button]);
         return false;
     }
 
     @Override
     public boolean isMouseButtonHeld(int button) {
+        this.logger.debug("Button: " + button + "Held: " + this.mouseButtons[button]);
         return false;
     }
 
     private void handleKeyEvent(int key, int action) {
         if (key < 0 || key >= KEY_COUNT) {
+            this.logger.error("The key you tried to use is not supported!");
             return;
         }
 

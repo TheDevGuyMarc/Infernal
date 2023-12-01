@@ -1,5 +1,6 @@
 package de.traumastudios.infernal.core.window;
 
+import de.traumastudios.infernal.core.debug.InfernalLogger;
 import lombok.Getter;
 import lombok.Setter;
 import org.lwjgl.glfw.GLFWErrorCallback;
@@ -25,9 +26,11 @@ import static org.lwjgl.system.MemoryUtil.memUTF8;
 public class Window implements IWindow {
     private long windowHandle;
     private WindowConfig windowConfig;
+    private InfernalLogger logger;
 
-    public Window(WindowConfig windowConfig) {
+    public Window(WindowConfig windowConfig, InfernalLogger logger) {
         this.windowConfig = windowConfig;
+        this.logger = logger;
     }
 
     @Override
@@ -45,6 +48,7 @@ public class Window implements IWindow {
 
         // Try to initialize GLFW
         if (!glfwInit()) {
+            this.logger.error("Unable to initialize GLFW");
             throw new IllegalStateException("Unable to initialize GLFW");
         }
 
@@ -69,6 +73,7 @@ public class Window implements IWindow {
         );
 
         if (this.windowHandle == NULL) {
+            this.logger.error("Failed to create the GLFW window");
             throw new RuntimeException("Failed to create the GLFW window");
         }
 
@@ -122,7 +127,6 @@ public class Window implements IWindow {
     /**
      * @TODO: Refactor this to use image / texture asset later because this will have the same image
      *        loading logic
-     * @TODO: Add correct logging mechanisms here
      * @param path
      */
     @Override
@@ -147,14 +151,13 @@ public class Window implements IWindow {
                 stbi_image_free(iconBuffer);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            this.logger.error("Unable to set window icon: " + e);
         }
     }
 
     /**
      * @TODO: Refactor this to use image / texture asset later because this will have the same image
      *        loading logic
-     * @TODO: Add correct logging mechanisms here
      * @param path
      */
     @Override
@@ -177,7 +180,7 @@ public class Window implements IWindow {
                 stbi_image_free(cursorImage);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            this.logger.error("Unable to set window cursor: " + e);
         }
     }
 
