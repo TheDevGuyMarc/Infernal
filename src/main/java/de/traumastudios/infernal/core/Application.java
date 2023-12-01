@@ -1,6 +1,7 @@
 package de.traumastudios.infernal.core;
 
 import de.traumastudios.infernal.core.debug.InfernalLogger;
+import de.traumastudios.infernal.core.input.Input;
 import de.traumastudios.infernal.core.window.Window;
 import de.traumastudios.infernal.core.window.WindowConfig;
 import lombok.Getter;
@@ -26,8 +27,8 @@ public class Application implements Base {
     private WindowConfig windowConfig;
     private Window window;
     private InfernalLogger logger = InfernalLogger.getInstance("application.log");
-    /*private Input inputHandler;
-    private AssetManager assetManager;
+    private Input inputHandler;
+    /*private AssetManager assetManager;
     private LocalizationManager localizationManager;
     private Renderer renderer;
     private AudioEngine audioManager;
