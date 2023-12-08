@@ -11,3 +11,5 @@ well that could be done better.
 - [ ] Prepare default language files for localization manager in english, german and japanese
 - [ ] Integrate the localization manager more in Infernal itself (it shouldn't be only an external API)
 - [ ] It is nice to have multiple log files, but try to categorize them and then consolidate them
+- [ ] Think about activation flags for logging and general debug output because we won't want to print thousands of
+  lines in the shell all the time
