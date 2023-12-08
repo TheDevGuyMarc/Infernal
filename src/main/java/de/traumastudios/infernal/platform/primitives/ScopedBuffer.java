@@ -1,5 +1,6 @@
 package de.traumastudios.infernal.platform.primitives;
 
+import de.traumastudios.infernal.core.debug.InfernalLogger;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 public class ScopedBuffer<T> {
+    private static final InfernalLogger logger = InfernalLogger.getInstance("primitives.log");
     private List<T> buffer;
     private int maxSize;
 
@@ -21,7 +23,7 @@ public class ScopedBuffer<T> {
         if (buffer.size() < maxSize) {
             buffer.add(item);
         } else {
-            System.out.println("Buffer is full. Cannot add more items.");
+            logger.warning("Buffer is full. Cannot add more items.");
         }
     }
 
